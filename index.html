@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <header class="max-w-[1440px] mx-auto px-6 py-5 flex items-center justify-between animate-fade-in delay-0">
+        <div class="flex items-center">
+            <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f6e10c1f-2b20-4f25-beab-6340fb9307d1/hero-2-img-0-1774884525294.png" alt="Logo" class="w-8 h-8 rounded-sm">
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="#" class="text-[15px] font-medium text-black hover:text-gray-600 transition-colors duration-200">Product</a>
+            <a href="#" class="text-[15px] font-medium text-black hover:text-gray-600 transition-colors duration-200">Solutions</a>
+            <a href="#" class="text-[15px] font-medium text-black hover:text-gray-600 transition-colors duration-200">Resources</a>
+            <a href="#" class="text-[15px] font-medium text-black hover:text-gray-600 transition-colors duration-200">Company</a>
+        </nav>
+
+        <div class="flex items-center gap-6">
+            <a href="#" class="text-[15px] font-medium text-black hover:text-gray-600 transition-colors duration-200 hidden sm:block">Log in</a>
+            <a href="#" class="bg-black text-white text-[15px] font-medium px-4 py-2 rounded-md hover:opacity-90 transition-all duration-200 active:scale-[0.97]">Start Your Sprint</a>
+        </div>
+    </header>
+
+    <!-- Main Company -->
+    <main class="max-w-[1440px] mx-auto px-6 pt-16 md:pt-24">
+        
+        <!-- Hero Content -->
+        <div class="max-w-[1000px]">
+            <h1 class="text-5xl md:text-7xl lg:text-[84px] font-semibold leading-[1.05] tracking-[-0.03em] text-black text-balance animate-fade-in-up delay-100">Premium Design Services for Market-Ready Digital Products</h1>
+            
+            <p class="mt-6 text-lg md:text-[22px] text-gray-500 leading-[1.5] max-w-[680px] text-pretty animate-fade-in-up delay-200">Get high-fidelity interfaces delivered through fixed-rate subscriptions and rapid design sprints without hiring internal design teams.</p>
+            
+            <div class="mt-10 md:mt-12 flex flex-wrap items-center gap-4 animate-fade-in-up delay-300">
+                <a href="#" class="bg-[#2563EB] text-white text-[15px] font-medium px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-all duration-200 active:scale-[0.97]">
+                    Contact sales
+                </a>
+                <a href="#" class="bg-white text-black border border-gray-200 text-[15px] font-medium px-6 py-3.5 rounded-lg hover:bg-gray-50 transition-all duration-200 active:scale-[0.97]">
+                    Get started
+                </a>
+            </div>
+        </div>
+
+        <!-- Logo Cloud -->
+        <div class="mt-24 md:mt-32 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20 animate-fade-in-up delay-400">
+            <p class="text-[13px] text-gray-500 leading-[1.4] max-w-[150px]">
+                Fortune 500 companies<br>that depend on Bird
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-16">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f6e10c1f-2b20-4f25-beab-6340fb9307d1/hero-2-img-1-1774884525105.png" alt="Pinterest" class="h-6 md:h-7 w-auto object-contain opacity-90 mix-blend-multiply">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/f6e10c1f-2b20-4f25-beab-6340fb9307d1/hero-2-img-2-1774884524122.png" alt="Uber" class="h-6 md:h-7 w-auto object-contain opacity-90 mix-blend-multiply">
+                <img src="https://placehold.co/100x32/ffffff/000000?text=Square" alt="Square" class="h-6 md:h-7 w-auto object-contain opacity-90 mix-blend-multiply">
+                <img src="https://placehold.co/130x32/ffffff/000000?text=Airwallex" alt="Airwallex" class="h-6 md:h-7 w-auto object-contain opacity-90 mix-blend-multiply">
+                <img src="https://placehold.co/100x32/ffffff/000000?text=Adobe" alt="Adobe" class="h-6 md:h-7 w-auto object-contain opacity-90 mix-blend-multiply">
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="mt-12 md:mt-16 animate-scale-in delay-500">
+            <img src="https://placehold.co/1392x720/e2e8f0/94a3b8?text=Hero+Image" alt="Man looking at phone in living room" class="w-full h-[400px] md:h-[600px] lg:h-[720px] object-cover rounded-[24px] md:rounded-[32px]">
+        </div>
+
+    </main>
+
+</body>
+</html>
